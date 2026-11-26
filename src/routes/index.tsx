@@ -46,7 +46,7 @@ function Index() {
   const lines = ["Ideas built", "at full speed."];
   return (
     <>
-      <section data-hero className="relative min-h-[92vh] px-5 pb-12 pt-5 sm:px-8 lg:px-14 lg:pb-16">
+      <section data-hero className="relative min-h-[92vh] overflow-x-clip px-5 pb-12 pt-5 sm:px-8 lg:px-14 lg:pb-16">
         <div className="speed-line absolute right-0 top-0 h-full w-[42%] bg-brand" />
         <div aria-hidden="true" className="h-[65px] md:h-[61px]" />
         <div className="relative z-10 flex min-h-[calc(92vh-92px)] flex-col justify-end pt-24">
@@ -55,19 +55,19 @@ function Index() {
               <img src={heroSpeed} alt="Long-exposure red and black motion streaks racing across a warm paper background" width={1600} height={800} loading="eager" fetchPriority="high" className="h-[20vh] w-full object-cover object-center sm:h-[26vh] lg:h-[30vh]" />
             </div>
           </div>
-          <p className="mb-5 mt-8 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-ink/55"><span className="h-px w-10 bg-brand" />Web design &amp; development · Sarasota, FL</p>
+          <p className="hero-enter mb-5 mt-8 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-ink/55"><span className="h-px w-10 bg-brand" />Web design &amp; development · Sarasota, FL</p>
           <h1 className="max-w-[1100px] text-[clamp(4.2rem,11vw,10rem)] font-semibold leading-[0.82] tracking-[-0.075em]">
-            <span className="title-line"><span style={{ animationDelay: "80ms" }}>{lines[0]}</span></span>
-            <span className="title-line pl-[10vw]"><span style={{ animationDelay: "220ms" }}>at <span className="text-brand">full speed.</span></span></span>
+            <span className="title-line title-line-left"><span>{lines[0]}</span></span>
+            <span className="title-line title-line-right pl-[10vw]"><span>at <span className="text-brand">full speed.</span></span></span>
           </h1>
           <div className="mt-9 flex flex-col gap-8 border-t border-ink/15 pt-6 md:flex-row md:items-end md:justify-between">
-            <p className="max-w-md text-lg leading-relaxed text-ink/65">We bring web design and development together to build high-performing websites for ambitious brands ready to move forward.</p>
+            <p className="hero-enter max-w-md text-lg leading-relaxed text-ink/65">We bring web design and development together to build high-performing websites for ambitious brands ready to move forward.</p>
             <div className="flex flex-col items-start gap-5 md:items-end">
-              <div className="flex flex-wrap items-center gap-x-6 gap-y-4">
+              <div className="hero-enter flex flex-wrap items-center gap-x-6 gap-y-4">
                 <Button variant="site" size="site" onClick={startProject} className="min-h-11 rounded-full bg-ink px-6 py-4 text-xs font-bold uppercase tracking-[0.14em] text-snow motion-safe:transition-transform motion-safe:hover:-translate-y-0.5">Start a project <Arrow /></Button>
                 <Link to="/services" className="inline-flex min-h-11 items-center gap-3 text-xs font-bold uppercase tracking-[0.14em] text-ink underline decoration-brand underline-offset-8">See services <span aria-hidden="true">→</span></Link>
               </div>
-              <div className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.16em]">
+              <div className="hero-enter flex items-center gap-3 text-xs font-bold uppercase tracking-[0.16em]">
                 <span className="relative flex size-2"><span className="absolute inline-flex size-full motion-safe:animate-ping rounded-full bg-brand opacity-40" /><span className="relative inline-flex size-2 rounded-full bg-brand" /></span>
                 Now booking new projects
               </div>

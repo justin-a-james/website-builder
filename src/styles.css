@@ -197,16 +197,21 @@
 @media (prefers-reduced-motion: reduce) { .drawer-in { animation: none; } }
 
 /* Title-card motion system */
-.title-line { display: block; overflow: hidden; padding-bottom: 0.08em; }
-.title-line > span { display: inline-block; animation: title-rise 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
-@keyframes title-rise { from { transform: translateY(105%); } to { transform: translateY(0); } }
+.title-line { display: block; padding-bottom: 0.08em; }
+.title-line > span { display: inline-block; }
+.title-line-left > span { animation: title-slide-left 750ms cubic-bezier(0.22, 0, 0.63, 1) 550ms both; }
+.title-line-right > span { animation: title-slide-right 750ms cubic-bezier(0.22, 0, 0.63, 1) 550ms both; }
+@keyframes title-slide-left { from { opacity: 0; transform: translateX(-10%); } to { opacity: 1; transform: translateX(0); } }
+@keyframes title-slide-right { from { opacity: 0; transform: translateX(10%); } to { opacity: 1; transform: translateX(0); } }
+.hero-enter { animation: hero-rise 1250ms cubic-bezier(0.38, 0, 0, 1) 1500ms both; }
+@keyframes hero-rise { from { opacity: 0; transform: translateY(20%); } to { opacity: 1; transform: translateY(0); } }
 .hero-parallax { will-change: transform; }
 .reveal { transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1); }
 .reveal[data-reveal="armed"] { opacity: 0; transform: translateY(28px); }
 .carousel-card { animation: card-in 0.5s ease both; }
 @keyframes card-in { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) {
-  .title-line > span, .carousel-card { animation: none; }
+  .title-line > span, .hero-enter, .carousel-card { animation: none; }
   .reveal, .reveal[data-reveal="armed"] { opacity: 1; transform: none; transition: none; }
   .hero-parallax { transform: none !important; }
 }
